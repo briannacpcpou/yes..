@@ -3,25 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apology Letter</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Apology Letter </title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="card">
-      <h1 class="title" contenteditable="true">I'm sorry</h1>
-      <h2 class="subtitle" contenteditable="true">Please forgive me</h2>
-      <p class="message" contenteditable="true">
-        Helloooo Jas, I just wanted to apologize to you for not being thoughtful enough. Firstly, I had two cookies with me yet I ate both of it without even thinking about you. I should've given you the other one. 
-        Peroo I didn't want to disturb you man gud because you seemed so focused on what you were doing. Second, please don't get mad at Alessi for choosing to go with her classmates to Gaisano instead of with us. 
-        You should ask her why she went with them. I hope you're doing well, Jas! We miss you. I'm sorry for not being a good friend and for not checking up on you pud. :(
-      </p>
-      <div class="actions">
-        <button onclick="window.print()">🖨️ Print</button>
-        <button onclick="downloadLetter()">⬇️ Download</button>
-      </div>
+  <!-- Intro screen -->
+  <div id="intro-screen" class="screen">
+    <h1>Do you want to open the letter? Please?</h1>
+    <div class="buttons">
+      <button id="yes-btn">Yes.?</button>
+      <button id="no-btn">No?!</button>
     </div>
   </div>
+
+  <!-- Letter open screen -->
+  <div id="open-screen" class="screen hidden">
+    <h2>Click the button to open the letter HEHE!</h2>
+    <button id="open-letter-btn" class="open-btn">Open Letter</button>
+  </div>
+
+  <!-- Letter screen -->
+  <div id="letter-screen" class="screen hidden">
+    <div class="letter-card">
+      <h1 contenteditable="true">I’m Sorry! </h1>
+      <p contenteditable="true">
+        Helloo Jas, I just want to properly apologize to you for not being a good friend, for being rude and disrespectful as well. I know you're probably upset because of three things or more. We'll never know, right? But anyway.. First, that ONE girl has been spreading rumors about you again. Second, Alessi bought me two cookies yet I was being inconsiderate and not being thoughtful enough to even give you one. Third or and the last one, you told me inside the classroom that you hate Alessi because she chose to go with her classmates to Gaisano instead of us. Well, I can't say anything about that, so just ask her. Anyway, Jas, I hope you reply to us na. We miss you na rabaa. She didn't mean to hurt your feelings, neither did I. I hope you're okay, Jas. I hope you'll finally reply to our messages. :(
+        
+      </p>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
