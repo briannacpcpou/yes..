@@ -1,27 +1,21 @@
-// Buttons
-const yesBtn = document.getElementById("yes-btn");
-const noBtn = document.getElementById("no-btn");
-const introScreen = document.getElementById("intro-screen");
-const openScreen = document.getElementById("open-screen");
-const letterScreen = document.getElementById("letter-screen");
-const openLetterBtn = document.getElementById("open-letter-btn");
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+const letter = document.querySelector(".letter");
 
 let noSize = 1;
-let yesSize = 1;
-
-noBtn.addEventListener("click", () => {
-  noSize *= 0.8; // shrink
-  yesSize *= 1.2; // grow
-  noBtn.style.transform = `scale(${noSize})`;
-  yesBtn.style.transform = `scale(${yesSize})`;
-});
 
 yesBtn.addEventListener("click", () => {
-  introScreen.classList.add("hidden");
-  openScreen.classList.remove("hidden");
+  document.querySelector(".container").style.display = "none";
+  letter.classList.remove("hidden");
 });
 
-openLetterBtn.addEventListener("click", () => {
-  openScreen.classList.add("hidden");
-  letterScreen.classList.remove("hidden");
+noBtn.addEventListener("click", () => {
+  noSize -= 0.1;
+  if (noSize <= 0.2) noSize = 0.2;
+  noBtn.style.transform = `scale(${noSize})`;
+
+  let yesSize = parseFloat(
+    window.getComputedStyle(yesBtn).getPropertyValue("font-size")
+  );
+  yesBtn.style.fontSize = yesSize + 4 + "px";
 });
