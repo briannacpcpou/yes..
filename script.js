@@ -17,5 +17,5 @@ noBtn.addEventListener("click", () => {
   let yesSize = parseFloat(
     window.getComputedStyle(yesBtn).getPropertyValue("font-size")
   );
-  yesBtn.style.fontSize = yesSize + 4 + "px";
+  yesBtn.style.fontSize = yesSize + 3 + "px";
 });
