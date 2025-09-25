@@ -1,63 +1,60 @@
+/* General styles */
 body {
-  margin: 0;
-  font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', cursive;
-  background: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background: #fff;
   color: #333;
-}
-
-.container {
-  padding: 20px;
-}
-
-.card {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  max-width: 600px;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
-.title {
-  color: #333;
-  font-size: 2.5em;
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  transition: opacity 0.6s ease;
 }
 
-.subtitle {
-  color: #555;
+.hidden {
+  display: none;
 }
 
-.message {
-  margin-top: 20px;
-  font-size: 1.2em;
-  line-height: 1.5em;
-}
-
-.actions {
-  margin-top: 20px;
-}
-
+/* Buttons */
 button {
-  background: #ffffff;
-  border: 2px solid #ddd;
-  padding: 10px 15px;
-  margin: 5px;
-  border-radius: 10px;
+  background: white;
+  border: 2px solid #333;
+  border-radius: 12px;
+  padding: 10px 20px;
+  margin: 10px;
   cursor: pointer;
-  font-size: 1em;
-  transition: box-shadow 0.2s ease;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 button:hover {
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transform: scale(1.1);
+  background: #f8f8f8;
 }
 
-@media print {
-  button {
-    display: none;
-  }
+/* Letter card */
+.letter-card {
+  background: white;
+  border: 2px solid #333;
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 500px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  animation: slideUp 0.7s ease;
+}
+
+.letter-card h1 {
+  margin-bottom: 20px;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
